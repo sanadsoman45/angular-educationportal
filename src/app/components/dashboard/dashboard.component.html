@@ -1,0 +1,87 @@
+<div class="container-fluid dashboard">
+  <div class="row justify-content-between">
+    <!-- Left Column (Text) -->
+    <div class="col-md-6 text-center py-5 order-2 order-md-1">
+      <blockquote class="blockquote">
+        <p class="mb-0">
+          Learn with expert <br />
+          anytime, anywhere
+        </p>
+      </blockquote>
+
+      <p class="lead">
+        Our mission is to help people find the best course <br />
+        online and learn with expert anytime, anywhere.
+      </p>
+
+      <div>
+        <button class="btn btn-primary btn-lg" [routerLink]="'/training'">Explore Trainings</button>
+      </div>
+    </div>
+
+    <div class="col-md-6 order-1 order-md-2 p-0 m-0">
+      <div alt="team" class="imgDiv"></div>
+    </div>
+  </div>
+</div>
+<div class="container text-center mt-3">
+  <div class="row">
+    <h1>Browse top category</h1>
+  </div>
+
+  <div class="row">
+    @for(category of categoryCountArr; track category){
+    <div class="col-md-4 gy-3">
+      <div class="card h-100">
+        <div class="card-header text-center">
+          {{ category.category[0].toUpperCase() + category.category.slice(1) }}
+        </div>
+        <div class="card-body d-flex justify-content-center align-items-center">
+          <h5 class="card-title text-center">
+            {{ category.count }}
+            {{ category.count > 1 ? "Courses" : "Course" }} Found.
+          </h5>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+
+  <div class="row">
+    <div>
+      <p class="d-flex justify-content-center align-items-center">
+        We have more categories.
+        <span [routerLink]="'/training'"
+          style="color: orangered; cursor: pointer"
+          class="d-flex align-items-center"
+        >
+          Browse All
+          <mat-icon>arrow_right_alt</mat-icon>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid dashboard text-center">
+  <div class="row">
+    <h1>Trending courses</h1>
+  </div>
+  <div class="row">
+    @for(category of categoryCountArr; track category){
+    <div class="col-md-4 gy-3">
+      <div class="card h-100">
+        <div class="card-header text-center">
+          {{ category.category[0].toUpperCase() + category.category.slice(1) }}
+        </div>
+        <div class="card-body d-flex justify-content-center align-items-center">
+          <h5 class="card-title text-center">
+            {{ category.count }}
+            {{ category.count > 1 ? "Courses" : "Course" }} Found.
+          </h5>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>

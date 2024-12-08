@@ -1,0 +1,7 @@
+a.nav-link {
+  cursor: pointer;
+}
+
+.active{ 
+    color: 'green' 
+}

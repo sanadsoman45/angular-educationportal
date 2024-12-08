@@ -1,0 +1,23 @@
+.blockquote > p {
+  font-size: 2.5rem;
+  line-height: 2.8rem;
+}
+
+.dashboard {
+  background-color: #eaebee;
+}
+
+.btn-primary {
+  background-color: #fd6b47 !important;
+}
+
+.imgDiv {
+  width: 100%;
+  height: 60vh;
+  transform: skewX(-1.9deg);
+  transform-origin: left;
+  background-image: url("../../../assets/images/it team.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
